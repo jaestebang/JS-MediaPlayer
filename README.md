@@ -188,3 +188,24 @@ gen.next();     //Value = 2
 gen.next();     //Value = 3
 gen.next(true); //Value = 1 - Reinicia el valor
 ```
+
+# GETTERS / SETTERS
+
+Son, en esencia, funciones que se ejecutan para obtener (“get”) y asignar (“set”) un valor, pero que para un código externo se ven como propiedades normales.
+
+Las propiedades de acceso se construyen con métodos de obtención ***“getter”*** y asignación ***“setter”***. En un objeto literal se denotan con **get** y **set**:
+
+```JavaScript
+const player = {
+    namePlayer: 'Johan',
+    agePlayer: null,
+    get data() { return `Player: ${this.namePlayer} - Age: ${this.agePlayer}` },
+    set age(value) { this.agePlayer = value }
+};
+
+//Asigna directamente los valores
+player.age = 21;
+
+//Obtiene los datos del jugador
+console.log(player.data()); //Player: Johan - Age: 21
+```
