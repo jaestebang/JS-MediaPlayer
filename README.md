@@ -22,6 +22,8 @@ variableGlobal = 'Variable global'
 		
 ## Function - Local Scope: Las variables solo van a tener alcance dentro del ámbito creado.
 
+Variables declaradas dentro de una función utilizando ***var*** sólo visibles dentro de ella misma (incluyendo los argumentos que se pasan a la función).
+
 ```JavaScript
 function variables() {
     var variableLocal = 'esto es una variable local';
